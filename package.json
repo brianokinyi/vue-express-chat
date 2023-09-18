@@ -1,0 +1,45 @@
+{
+  "name": "vue-express-chat",
+  "author": "Brian Okinyi <brianokinyi.bo@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "version": "0.0.0",
+  "keywords": [
+    "vue",
+    "vue-js-chat",
+    "chat",
+    "vuejs",
+    "simple-chat"
+  ],
+  "main": "./dist/vue-express-chat.umd.js",
+  "module": "./dist/vue-express-chat.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-express-chat.js",
+      "require": "./dist/vue-express-chat.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.0.18",
+    "core-js": "^3.32.2",
+    "linkify-element": "^4.1.1",
+    "linkifyjs": "^4.1.1",
+    "moment": "^2.29.4",
+    "vue": "^3.3.4",
+    "vue-material-design-icons": "^5.2.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "less": "^4.2.0",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  }
+}
