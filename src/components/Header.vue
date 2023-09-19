@@ -22,7 +22,7 @@ const props = defineProps({
         
         <div v-if="!hasHeaderSlot" class="">
             <h5 class="text-lg">{{ chatTitle }}</h5>
-            <div class="flex justify-center">
+            <div class="flex justify-center space-x-2 font-medium">
                 <span>{{ myself.name }}, </span>
                 <span v-for="(participant, index) in participants" :key="participant.id">
                     {{ participant.name }}{{ participants.length - index - 1 ? ', ' : '' }}

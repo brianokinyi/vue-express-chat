@@ -125,7 +125,7 @@ const props = defineProps({
             </template>
         </Header>
 
-        <div class="mt-6">
+        <div class="mt-4">
             <MessageDisplay  
                 :myself="myself"
                 :participants="participants"

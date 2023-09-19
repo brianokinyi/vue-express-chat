@@ -36,13 +36,13 @@ const onImageClicked = (message) => {
 
 <template>
     <div class="flex justify-start pr-2">
-        <div class="mr-2">
+        <!-- <div class="mr-2">
             <img class="rounded-full w-6 h-6" :src="getParticipantById(message.participantId).profilePicture" >
-        </div>
+        </div> -->
 
         <div class="message-content">
             <template v-if="message.type == 'image'">
-                <h5 class="message-username-image">{{ getParticipantById(message.participantId).name }}</h5>
+                <h5 class="message-username-image">{{ getParticipantById(message.participantId) }}</h5>
                 <div v-if="message.uploaded" class="message-image">
                     <img class="message-image-display" :src="message.src" alt="" @click="onImageClicked(message)">
                 </div>
@@ -52,14 +52,20 @@ const onImageClicked = (message) => {
                 </div>
             </template>
 
+            <template v-else-if="message.type == 'notice'">
+                <div class="bg-gray-800 text-white px-4 py-3 rounded-lg break-words whitespace-pre-wrap text-sm">
+                    <p v-html="message.content"></p>
+                </div>
+            </template>
+
             <template v-else>
                 <div class="bg-gray-100 px-4 py-3 rounded-lg max-w-[70%] break-words whitespace-pre-wrap">
-                    <h5 class="text-sm text-gray-900 font-semibold">{{ getParticipantById(message.participantId).name }}</h5>
+                    <h5 class="text-sm text-gray-900 font-semibold">{{ getParticipantById(message.participantId) }}</h5>
                     <p>{{ message.content }}</p>
                 </div>
             </template>
 
-            <div class="text-gray-500 max-w-[50%] flex items-center justify-start text-xs">
+            <div class="text-gray-500 max-w-[50%] flex items-center justify-start text-xs mt-1">
                 <div> 
                     {{ moment(message.timestamp).format('h:mm a') }}
                 </div>

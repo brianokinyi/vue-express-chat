@@ -56,9 +56,9 @@ const onImageClicked = (message) => {
             </div>
         </div>
 
-        <div class="ml-2">
+        <!-- <div class="ml-2">
             <img class="rounded-full w-6 h-6" :src="myself.profilePicture" >
-        </div>
+        </div> -->
     </div>
 </template>
 
