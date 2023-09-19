@@ -3,7 +3,7 @@
   "author": "Brian Okinyi <brianokinyi.bo@gmail.com>",
   "license": "MIT",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "vue",
     "vue-js-chat",
@@ -15,7 +15,7 @@
   "module": "./dist/vue-express-chat.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-express-chat.es.js",
+      "import": "./dist/vue-express-chat.js",
       "require": "./dist/vue-express-chat.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
